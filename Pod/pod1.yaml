@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd-pod  # Name of the pod
+spec:
+  containers:
+  - name: httpd-container  # Name of the container
+    image: httpd:2.4.62  # Docker image (Apache HTTP Server version 2.4.62)
+    ports:
+    - containerPort: 80  # Expose port 80 for HTTP traffic
+
