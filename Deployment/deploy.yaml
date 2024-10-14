@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment  # Name of your deployment
+spec:
+  replicas: 3  # Number of desired pods
+  selector:
+    matchLabels:
+      app: httpd
+  # Label used to identify the pods
+  template:
+    metadata:
+      labels:
+        app: httpd  # Same label as above
+    spec:
+      containers:
+      - name: my-app-container  # Name of the container
+        image: httpd:2.4.62  # Docker image (replace with your image)
+        ports:
+        - containerPort: 80  # Expose this port from the container
