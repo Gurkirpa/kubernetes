@@ -1,0 +1,18 @@
+-> docker build -t guraman/cafe-website:v3 .
+
+-> docker run -d -p 8080:80 guraman/cafe-website:v3
+
+-> docker login
+
+-> docker push guraman/cafe-website:v3
+
+-> create deploy.yaml file
+     kubectl apply -f deploy.yaml
+     kubectl get deploy
+     kubectl get pod
+
+-> create service.yaml file
+     kubectl apply -f svc.yaml
+     kubectl get svc
+
+http://54.236.21.142:8080
