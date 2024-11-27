@@ -6,4 +6,40 @@ data:
   db_user: "Amanjot"
   db_port: :"3304"
 
+  
+  ----------------------------congigmap.yaml---------------------------
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jot-config
+data:
+  string-value: "Hello,Gurjit"
+  number-value: "42"
+  boolean-value: "true"
+  multiline-value: |
+    This is a Amanjot.
+    Gurjit is my husband.
+  list-value: |
+    - jot
+    - Guri
+  object-value: |
+    key1: Sahi
+    key2: Nagra
+  json-value: |-
+    {
+      "key": "Gurjit",
+      "array": [1, 2, 3],
+      "nested": {
+        "innerKey": "GurAman"
+      }
+    }
+  yaml-value: |-
+    key: value
+    array:
+      - 1
+      - 2
+      - 3
+    nested:
+      innerKey: innerValue
+
 
